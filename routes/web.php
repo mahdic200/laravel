@@ -17,4 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// episode23
 Route::any('/test', 'HomeController@index');
+
+// making a service provider and adding its name to folder config
+// php artisan make:provider <ProviderName> 

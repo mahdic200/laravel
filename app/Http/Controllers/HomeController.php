@@ -13,8 +13,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $projects = ['laravel', 'php', 'js', 'python', 'UI', 'html', 'css', 'jquery'];
-        return view('home', compact('projects'));
+        return view('home');
     }
 
     /**

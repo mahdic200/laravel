@@ -15,7 +15,7 @@
 @endsection --}}
 {{-- @each('layouts.error', $projects, 'project', 'layouts.master') --}}
 
-@isset($projects)
+{{-- @isset($projects)
     @if (count($projects) > 0)
         <ul>
             @foreach ($projects as $project)
@@ -25,8 +25,9 @@
     @else
         @include('layouts.welcome')
     @endif
-@endisset
+@endisset --}}
 
+{{ $count }}
 @section('script')
     @parent
     {{-- برای اضافه کردن به صفحه مستر نه پاک کردن اسکریپت هاش و دوباره نویسیش--}}

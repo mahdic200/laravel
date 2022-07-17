@@ -5,10 +5,10 @@ namespace App\Providers;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
-class AppServiceProvider extends ServiceProvider
+class TestServiceProvider extends ServiceProvider
 {
     /**
-     * Register any application services.
+     * Register services.
      *
      * @return void
      */
@@ -18,12 +18,15 @@ class AppServiceProvider extends ServiceProvider
     }
 
     /**
-     * Bootstrap any application services.
+     * Bootstrap services.
      *
      * @return void
      */
     public function boot()
     {
-        // View::share('count', 5);
+        // view()->composer('home', function($view) {
+        //     $view->with('count', 5);
+        // });
+        view()->composer('home', \App\Http\View\Composers\TestComposer::class);
     }
 }
