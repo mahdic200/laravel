@@ -27,7 +27,9 @@
     @endif
 @endisset --}}
 
-{{ $count }}
+@inject('car', 'App\Car')
+
+{{ $car->count() }}
 @section('script')
     @parent
     {{-- برای اضافه کردن به صفحه مستر نه پاک کردن اسکریپت هاش و دوباره نویسیش--}}
