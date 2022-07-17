@@ -1,5 +1,8 @@
 <?php
 
+
+use App\Http\Controllers\HomeController;
+use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,3 +17,4 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::any('/test', 'HomeController@index');
