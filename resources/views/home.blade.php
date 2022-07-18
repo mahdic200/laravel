@@ -1,12 +1,12 @@
 @extends('layouts.master')
-@section('title', 'dashboard')
 
-{{-- @section('content', View::make('welcome')) --}}
+@push('css')
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="adfadsf.css">
+    <link rel="stylesheet" href="asfdasfd.css">
+    <link rel="stylesheet" href="sasfrhtdyjytyle.css">
+@endpush
 
-
-
-@section('script')
-    @parent
-    {{-- برای اضافه کردن به صفحه مستر نه پاک کردن اسکریپت هاش و دوباره نویسیش--}}
-    <script src=""></script>
-@endsection
+@prepend('css')
+    <link rel="stylesheet" href="extra.css">
+@endprepend

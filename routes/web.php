@@ -14,22 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
 
-// episode23
-// Route::any('/test', 'HomeController@index');
+// episode26 
+// stacks
 
-// making a service provider and adding its name to folder config
-// php artisan make:provider <ProviderName> 
-
-
-//episode24
-
-// Route::any('/', function(App\Car $car) {
-//     return view('home', compact('car'));
-// });
-
-// episode25
-// custom if statement
+Route::any('/', 'HomeController@index');
