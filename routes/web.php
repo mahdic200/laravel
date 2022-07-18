@@ -30,3 +30,6 @@ Route::get('/', function () {
 // Route::any('/', function(App\Car $car) {
 //     return view('home', compact('car'));
 // });
+
+// episode25
+// custom if statement
