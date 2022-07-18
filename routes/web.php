@@ -13,15 +13,14 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+// episode28
+// finally DataBase in laravel
+/*
+    DataBase file is in config/database.php
+    you can edit database information in .env file
 
-// episode27
-// test in laravel - part 2
-// episode17
-Route::get('/', 'App\Http\Controllers\HomeController@index');
-// according to episode 17
-// making a test file in php
-//php artisan make:test <name> --unit
-
-// فقط ی تست خاص انجام بشه
-//./vendor/bin/phpnuit --filter <TestName>
-// in folder test/Unit you can find what you wrote
+    database tables are in database/migrations
+    by using command -> php artisan migrate
+    to undo this action you should use command
+    -> php artisan migrate:rollback
+*/
