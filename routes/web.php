@@ -24,3 +24,13 @@ use Illuminate\Support\Facades\Route;
     to undo this action you should use command
     -> php artisan migrate:rollback
 */
+
+// episode29
+/* 
+    
+*/
+
+
+
+
+
