@@ -14,8 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// episode27
+// test in laravel - part 2
+// episode17
+Route::get('/', 'App\Http\Controllers\HomeController@index');
+// according to episode 17
+// making a test file in php
+//php artisan make:test <name> --unit
 
-// episode26 
-// stacks
-
-Route::any('/', 'HomeController@index');
+// فقط ی تست خاص انجام بشه
+//./vendor/bin/phpnuit --filter <TestName>
+// in folder test/Unit you can find what you wrote
