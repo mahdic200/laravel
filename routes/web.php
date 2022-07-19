@@ -49,5 +49,24 @@ example:
 */
 
 
+// episode31
+/*
+shows status of migrations
+    php artisan migrate:status
+resets (delete) all tables in database
+    php artisan migrate:reset
+first (run "down" method in migration file) delete's all tables in databse and 
+then creat's all of them according to your migrations
+    php artisan migrate:refresh
+first delete's all tables (without assuming down method
+, it does not matter what you have written in down method) in databse and 
+then creat's all of them according to your migrations
+    php artisan migrate:fresh
+
+rollback's (call's down methods from migration files
+which is related to steps) two last steps in database 
+    php artisan migrate:rollback --step=2
+*/
+
 
 
