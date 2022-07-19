@@ -27,9 +27,26 @@ use Illuminate\Support\Facades\Route;
 
 // episode29
 /* 
+    data types in laravel
+    database tables are in database/migrations
     
 */
 
+
+//episode30
+/*
+for making table
+    php artisan make:migration <migrationName> --create=<tableName>
+for changing a table columns 
+    php artisan make:migration <migrationName> --table=<tableName>
+example:
+    php artisan make:migration add_images_to_articles-table --table=articles
+    خب ی کم فارسی بنویسم o(*￣︶￣*)o
+    میتونی بعد از اینکه توی اون فایل نوشتی چی میخوای اضافه کنی 
+    به ستون های جدول ، حتی میتونی بگی کجا میخوای اضافه کنی 
+    $table->text('images')->after('description');
+    
+*/
 
 
 
