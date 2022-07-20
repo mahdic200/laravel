@@ -79,7 +79,7 @@ which is related to steps) two last steps in database
 /*
     تغییر دادن جدول ها در لاراول
     برای تغییر دادن باید این پکیج رو اضافه کنی 
-    composer require doctrine/dbal
+    composer require doctrine/dbal:^2.10.0 -w
 
 // برای تغییر نوع ی ستون اینطوری عمل میکنیم
 // نوع جدیدی که میخوایم رو مینویسیم و آخرش ی 
@@ -93,4 +93,20 @@ which is related to steps) two last steps in database
 // تغییر دادن تایپ ها محدودیت داره و هرچیزی رو نمیشه تغییر داد 
 // مث ای نام
 // ENUM
+*/
+
+// episode34
+/*
+    یک سری اطلاعات تستی میزاره تو دیتا بیس که بتونی آزمایش انجام بدی روی دیتابیست
+    seeder
+    php artisan make:seeder <seederName>
+
+// بهتره قبل از اینکه فایل سیدر رو اجرا کنی بیای و این وبزنی 
+// تا اون فایل اتو لود کامپوزر بازسازی بشه
+    composer dump-autoload
+    
+// برای اجرای همه سیدر ها
+    php artisan db:seed
+// برای اجرای یک سیدر مشخص
+    php artisan db:seed --class=UsersTableSeeder
 */
