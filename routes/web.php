@@ -110,3 +110,12 @@ which is related to steps) two last steps in database
 // برای اجرای یک سیدر مشخص
     php artisan db:seed --class=UsersTableSeeder
 */
+Route::any('/', 'HomeController@index');
+// episode35
+
+/*
+    in home controller
+    $user = factory(User::class, 20)->create();
+    
+    config/app -> search-> faker
+*/
