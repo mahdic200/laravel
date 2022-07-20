@@ -74,3 +74,23 @@ which is related to steps) two last steps in database
 /*
     
 */
+
+// episode33
+/*
+    تغییر دادن جدول ها در لاراول
+    برای تغییر دادن باید این پکیج رو اضافه کنی 
+    composer require doctrine/dbal
+
+// برای تغییر نوع ی ستون اینطوری عمل میکنیم
+// نوع جدیدی که میخوایم رو مینویسیم و آخرش ی 
+// change()
+// میزنیم
+    $table->string('address', 255)->change();
+// برای پاک کردن چند ستون از آرایه استفاده میکنیم
+    $table->dropColumn(['address', 'image']);
+    $table->renameColumn('avatar', 'image');
+
+// تغییر دادن تایپ ها محدودیت داره و هرچیزی رو نمیشه تغییر داد 
+// مث ای نام
+// ENUM
+*/
