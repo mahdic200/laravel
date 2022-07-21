@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Post;
 use Illuminate\Http\Request;
 use App\User;
 
@@ -14,7 +15,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $user = factory(User::class, 20)->create();
+        // echo "<pre>";
+        // var_dump($user);
         return view('home');
     }
 

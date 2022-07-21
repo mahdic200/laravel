@@ -105,6 +105,7 @@ which is related to steps) two last steps in database
 // تا اون فایل اتو لود کامپوزر بازسازی بشه
     composer dump-autoload
     
+    
 // برای اجرای همه سیدر ها
     php artisan db:seed
 // برای اجرای یک سیدر مشخص
@@ -118,4 +119,18 @@ Route::any('/', 'HomeController@index');
     $user = factory(User::class, 20)->create();
     
     config/app -> search-> faker
+*/
+
+
+// episode36
+/*
+    making a new factory
+
+    php artisan make:factory <Name>
+
+    making a new model
+    نباید از حروف جمع استفاده بکنی و حرف اولشم باید بزرگ باشه
+    
+
+    php artisan make:model <Name>
 */

@@ -1,0 +1,23 @@
+[2022-07-19 19:53:01] local.ERROR: Command "migrate:" is ambiguous.
+Did you mean one of these?
+    migrate:fresh    Drop all tables and re-run all migrations
+    migrate:install  Create the migration repository
+    migrate:refresh  Reset and re-run all migrations
+    migrate:reset    Rollback all database migrations
+    migrate:rollback Rollback the last database migration
+    migrate:status   Show the status of each migration. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"migrate:\" is ambiguous.
+Did you mean one of these?
+    migrate:fresh    Drop all tables and re-run all migrations
+    migrate:install  Create the migration repository
+    migrate:refresh  Reset and re-run all migrations
+    migrate:reset    Rollback all database migrations
+    migrate:rollback Rollback the last database migration
+    migrate:status   Show the status of each migration. at C:\\xampp\\htdocs\\laravel_5.8\\vendor\\symfony\\console\\Application.php:717)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\laravel_5.8\\vendor\\symfony\\console\\Application.php(237): Symfony\\Component\\Console\\Application->find('migrate:')
+#1 C:\\xampp\\htdocs\\laravel_5.8\\vendor\\symfony\\console\\Application.php(149): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 C:\\xampp\\htdocs\\laravel_5.8\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(90): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 C:\\xampp\\htdocs\\laravel_5.8\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(133): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 C:\\xampp\\htdocs\\laravel_5.8\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
