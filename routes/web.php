@@ -134,3 +134,20 @@ Route::any('/', 'HomeController@index');
 
     php artisan make:model <Name>
 */
+
+// episode37
+/*
+    sql of selecting in laravel
+
+    
+    in homeController
+    $users = DB::select();
+    $users = DB::select("SELECT * FROM users WHERE id = :id;", ['id' => 12]);
+
+    
+    $users = DB::insert("INSERT INTO users (name, email, password) values (?, ?, ?);", ['mahdi', 'e@gmail.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi']);
+
+    $users = DB::update("UPDATE users SET name = ? WHERE id = ?;", ['ali', 41]);
+    
+
+*/

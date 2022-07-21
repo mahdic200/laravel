@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Post;
-use Illuminate\Http\Request;
 use App\User;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -15,8 +16,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // echo "<pre>";
-        // var_dump($user);
+        $users = DB::delete("DELETE FROM users WHERE id = ?;", [41]);
+        // dd($users);
         return view('home');
     }
 
