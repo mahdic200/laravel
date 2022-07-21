@@ -148,6 +148,20 @@ Route::any('/', 'HomeController@index');
     $users = DB::insert("INSERT INTO users (name, email, password) values (?, ?, ?);", ['mahdi', 'e@gmail.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi']);
 
     $users = DB::update("UPDATE users SET name = ? WHERE id = ?;", ['ali', 41]);
-    
+
+
+*/
+
+// episode38
+
+/*
+    Collections and fluent codes
+    query filder
+    selecting with methods
+
+    $users = DB::table('users')->where('name', 'بانویه وکیلی')->where('email', 'abbas95@example.net')->get();
+
+    $users = DB::table('users')->get();
+
 
 */

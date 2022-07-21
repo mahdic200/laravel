@@ -16,8 +16,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $users = DB::delete("DELETE FROM users WHERE id = ?;", [41]);
-        // dd($users);
+        // $test = collect(['mahdi', 'reza', 'asad', 'shayan', 'sahand']);
+        // $users = DB::table('users')->where('name', 'بانویه وکیلی')->where('email', 'abbas95@example.net')->get();
+        // $users = DB::table('users')->where([
+        //     ['email' , 'abbas95@example.net'],
+        //     ['name', 'بانویه وکیلی'],
+        // ])->get();
+        $users = DB::table('users')->where('email', 'qazwini.khorshid@example.org')->orWhere('name', 'داوود آشوری')->get();
+
+        dd($users);
         return view('home');
     }
 
