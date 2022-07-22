@@ -16,13 +16,17 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // $test = collect(['mahdi', 'reza', 'asad', 'shayan', 'sahand']);
-        // $users = DB::table('users')->where('name', 'بانویه وکیلی')->where('email', 'abbas95@example.net')->get();
-        // $users = DB::table('users')->where([
-        //     ['email' , 'abbas95@example.net'],
-        //     ['name', 'بانویه وکیلی'],
-        // ])->get();
-        $users = DB::table('users')->where('email', 'qazwini.khorshid@example.org')->orWhere('name', 'داوود آشوری')->get();
+        // $users = DB::table('users')->whereBetween('id', [1, 10])->get();
+        // $users = DB::table('users')->whereNotBetween('id', [1, 10])->get();
+        // $users = DB::table('users')->whereIn('id', [1, 10])->get();
+        // $users = DB::table('users')->whereNotIn('id', [1, 10])->get();
+        // $users = DB::table('users')->whereNull('updated_at')->get();
+        // $users = DB::table('users')->whereNotNull('updated_at')->get();
+        // $users = DB::table('users')->whereDate('updated_at', '2022-7-21')->get();
+        // $users = DB::table('users')->whereColumn('name', '<>', 'email')->get();
+        $users = DB::table('users')->where('id', 1)->orWhere('id' , 2)->where(function($query) {
+            $query->where('name', 'mahdi')->orWhere('email', 'email@gmail.com');
+        })->get();
 
         dd($users);
         return view('home');

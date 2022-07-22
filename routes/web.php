@@ -165,3 +165,37 @@ Route::any('/', 'HomeController@index');
 
 
 */
+
+//episode39
+
+/*
+    برای پیدا کردن یک مقدار های مشخصی که در بازه ایی قرار دارند
+    whereBetween('target', [low, high]);
+    دقیقا نقیض این بالایی رو اجرا میکنه
+    whereNotBetween('target', [low, high]);
+
+    این هم مث وربیتوینه اما تفاوتش اینه که دقیقا چیز هایی رو پیدا میکنه که 
+    در آرایه داده شده بهش باشه
+    whereIn('target', [value1, value2, value3, ...]);
+    حالا دقیقا برعکس بالایی رو هم داریم
+    whereNotIn('target', [value1, value2, value3, ...]);
+
+    دستور بعدی خیلی پرکاربرده
+    یک ستون در جدول رو میگیره ازت و رکورد هایی که اون قسمت رو خالی 
+    دارند برات میاره
+    whereNull('target');
+    دقیقا برعکس همین رو هم داریم
+    wherNotNull('target');
+
+    زیاد استفاده نمیشه
+    whereDate('target', dateValue);
+    
+    این دستور زیاد استفاده میشه
+    whereColumn('target1', operator(<=>), 'target1');
+
+    از دستورات وِر پیچیده و تو درتو هم میشه استفاده کرد
+    $users = DB::table('users')->where('id', 1)->orWhere('id' , 2)->where(function($query) {
+            $query->where('name', 'mahdi')->orWhere('email', 'email@gmail.com');
+        })->get();
+*/
+
