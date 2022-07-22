@@ -242,3 +242,50 @@ Route::any('/', 'HomeController@index');
     DB::raw("sql");
     میتونی اسکیوال خام بنویسی
 */
+
+
+// episode41
+/*
+    ی دستور کاربردی
+    when
+
+    first -> این دستور میاد و اولین چیزی که تو جدوله 
+    برات به صورت یک آرایه میاره
+    get -> این دستور به صورت یک کالکشن برات هرچی داری رو بسته 
+    به اس کیو الت میاره
+
+    برای پیشگیری از ارور های لاراول میایم و بجای فرست از
+    firstOrFail()
+    استفاده میکنیم
+
+    برای دسترسی به یک فیلد چیزی که بدست آوردی
+    همونطوری اسم همون ستون رو مینویسی 
+    به صورت اَتریبیوت  ، نه به صورت متود
+    مثال:
+    $users = DB::table('users')->first()->id;
+    دقت کن که رکوردی که میگیری باید به صورت تکی باشه ها
+    واگرنه بدبخت از کجا بدونه تو آیدی یا مثلا فیلد کدوم رکورد رو میخوای
+
+    بعضی وقت ها هم بجای اینکه اون آیتم هارو بخوای 
+    از دیتابیست ،تعدادشونو میخوای باید بجای گِت از 
+    count
+    استفاده کنی 
+    $users = DB::table('users')->where('id', 1)->orWhere('id', 2)->count();
+
+
+    min('target') -> returns minimum value according to
+    its arqument in table
+
+    max('target') -> returns maximum value according to
+    its arqument in table
+
+    returns the summation of its argument in the 
+    selected table
+        sum()
+    
+        returns the avergae of its argument in the 
+    selected table
+    avg()
+
+
+*/

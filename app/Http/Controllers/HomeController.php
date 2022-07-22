@@ -16,17 +16,22 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // $first = DB::table('users')->whereNull('updated_at');
-        // $users = DB::table('users')->whereNull('created_at')->union($first)->get();
-        // $users = DB::table('users')->orderBy('id', 'ASC')->get();
-        // $users = DB::table('users')->latest()->first();
-        // $users = DB::table('users')->inRandomOrder()->first();
-        // $users = DB::table('users')->take(5)->get();
-        // $users = DB::table('users')->skip('10')->take(5)->get();
-        
-        
-        // $users = DB::table('posts')->groupBy('user_id')->having('user_id', '>', 70)->get();
-        $users = DB::table('posts')->groupBy('user_id')->select('user_id', DB::raw("count(*) as total"))->get();
+        // $result = false;
+        // $users = DB::table('users')->when($result, function($query) {
+        //     $query->where('id', '1');
+        // })->get();
+
+        // $users = DB::table('users')->get();
+        // $users = DB::table('users')->first();
+        // $users = DB::table('users')->first()->id;
+        // $users = DB::table('users')->where('id', 1)->orWhere('id', 2)->get();
+
+        // $users = DB::table('users')->where('id', 1)->orWhere('id', 2)->count();
+        // $users = DB::table('users')->min('id');
+        // $users = DB::table('users')->max('id');
+        // $users = DB::table('users')->sum('id');
+        $users = DB::table('users')->avg('id');
+
 
         dd($users);
         return view('home');
