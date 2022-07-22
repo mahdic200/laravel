@@ -111,6 +111,7 @@ which is related to steps) two last steps in database
 // برای اجرای یک سیدر مشخص
     php artisan db:seed --class=UsersTableSeeder
 */
+
 Route::any('/', 'HomeController@index');
 // episode35
 
@@ -199,3 +200,45 @@ Route::any('/', 'HomeController@index');
         })->get();
 */
 
+// episode40
+/*
+    joins in laravel
+    $users = DB::table('posts')->join('tableName', 'relationedColumnInSecondTable', 'firstTableRelationedColumn')->get();
+    leftJoin and rightJoin and crossJoin
+    اگر نیاز بشه آقای خسروجردی میگه
+    حالا مبحث اسکیوال های پیچیده و تو در تو
+
+
+    $first = DB::table('users')->whereNull('updated_at');
+    $users = DB::table('users')->whereNull('created_at')->union($first)->get();
+    
+    دقت کن اونی که داری آنینش میکنی نباید گت داشته باشه 
+    باید به صورت کوئری باشه
+
+    orderby
+    $users = DB::table('users')->orderBy('')->get();
+    latest -> first
+
+    کار همون لیمیت رو انجام میده 
+    take('number')
+    اون تعدادی رو که بهش میدی رد میکنه 
+    skip('number')
+
+    you can use limit instead of take 
+    and also you can use offset instead of skip
+
+    group by and having
+    هوینگ دقیقا مث وِر عمل میکنه و تفاوت زیادی ندارن
+    
+    برای اینکه لاراول کص گیر نده به 
+    groupBy
+    میری تو این مسیر
+    /config/database.php -> search -> mysql
+    and change strict to -> strict => false
+
+    این کار اصولی نیست و امکان ایجاد حفره امنیتی برای 
+    سایت وجود داره
+    با دستور
+    DB::raw("sql");
+    میتونی اسکیوال خام بنویسی
+*/

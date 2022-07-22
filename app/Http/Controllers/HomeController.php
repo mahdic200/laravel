@@ -16,17 +16,17 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // $users = DB::table('users')->whereBetween('id', [1, 10])->get();
-        // $users = DB::table('users')->whereNotBetween('id', [1, 10])->get();
-        // $users = DB::table('users')->whereIn('id', [1, 10])->get();
-        // $users = DB::table('users')->whereNotIn('id', [1, 10])->get();
-        // $users = DB::table('users')->whereNull('updated_at')->get();
-        // $users = DB::table('users')->whereNotNull('updated_at')->get();
-        // $users = DB::table('users')->whereDate('updated_at', '2022-7-21')->get();
-        // $users = DB::table('users')->whereColumn('name', '<>', 'email')->get();
-        $users = DB::table('users')->where('id', 1)->orWhere('id' , 2)->where(function($query) {
-            $query->where('name', 'mahdi')->orWhere('email', 'email@gmail.com');
-        })->get();
+        // $first = DB::table('users')->whereNull('updated_at');
+        // $users = DB::table('users')->whereNull('created_at')->union($first)->get();
+        // $users = DB::table('users')->orderBy('id', 'ASC')->get();
+        // $users = DB::table('users')->latest()->first();
+        // $users = DB::table('users')->inRandomOrder()->first();
+        // $users = DB::table('users')->take(5)->get();
+        // $users = DB::table('users')->skip('10')->take(5)->get();
+        
+        
+        // $users = DB::table('posts')->groupBy('user_id')->having('user_id', '>', 70)->get();
+        $users = DB::table('posts')->groupBy('user_id')->select('user_id', DB::raw("count(*) as total"))->get();
 
         dd($users);
         return view('home');
