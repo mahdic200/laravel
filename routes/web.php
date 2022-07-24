@@ -324,3 +324,33 @@ Route::any('/', 'HomeController@index');
             db]
         );
 */
+
+// episode43
+/*
+    increment and decrement
+    increment -> increases one point 
+
+    where('column', 'value')->increment('column')
+
+    decrenent does exactly the oposite what increment does
+    where('column', 'value')->decrement('column')
+    
+    من این و خوب میشناسم :)
+    $users = DB::table('users')->where('id', 89)->delete();
+
+
+    آقای خسروجردی ی چیزی درباره ترانکیت گفت
+    ولی خب زیاد توضیح نداد 
+    گفت اگر میخواین آیدی هارو از صفر بشماره باید ازش
+    استفاده کنیم
+
+    transaction
+    به معنی معامله
+
+    عملیاتی باید کامل انجام بشه تا همه به ثمر برسه 
+    اگر حین عملیات چیزی به مشکل بر بخوره هر کاری رو که کرده
+    رول بک میزنه
+    DB::transaction(function() {
+        do what you want to do
+    })
+*/

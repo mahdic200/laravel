@@ -36,15 +36,33 @@ class HomeController extends Controller
         // $user = DB::table('users')->where('id', 1)->update([
         //     'name' => 'hassan'
         // ]);
-        $user = DB::table('users')->updateOrInsert(
-            ['name' => 'mahdi', 'email' => 'email@gmial.com', ],
-            ['password' => 'password'],
-        );
+        // $user = DB::table('users')->updateOrInsert(
+        //     ['name' => 'mahdi', 'email' => 'email@gmial.com', ],
+        //     ['password' => 'password'],
+        // );
 
-        
+        // $users = DB::table('users')->where('id', 1)->decrement('age');
 
-        dd($user);
-        return view('home');
+        // $users = DB::table('users')->where('id', 87)->delete();
+        // $result = DB::transaction(function () {
+        //     DB::table('users')->where('id', 85)->update(['name' => 'test']);
+        //     DB::table('users')->where('id', 86)->update(['name' => 'test']);
+        // });
+
+        try
+        {
+            DB::beginTransaction();
+            DB::table('users')->where('id', 85)->update(['name' => 'mahdibahdi']);
+            DB::table('users')->where('id', 86)->update(['name' => 'thisismahdi']);
+            DB::commit();
+        }
+        catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+
+
+        // dd($result);
+        // return view('home');
     }
 
     /**
