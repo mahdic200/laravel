@@ -16,10 +16,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-
-        $users = "";
-        dd($users);
         return view('home');
+    }
+
+    public function showUser(User $user)
+    {
+        dd($user);
     }
 
     /**

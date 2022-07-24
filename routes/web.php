@@ -43,7 +43,7 @@ use Illuminate\Support\Facades\Route;
         do what you want to do
     })
 */
-Route::any('/', 'HomeController@index');
+// Route::any('/', 'HomeController@index');
 
 // episode44
 /*
@@ -55,4 +55,21 @@ Route::any('/', 'HomeController@index');
     میتونی بهش بگی که علاوه بر مدلش ، کنترلر و 
     میگریشنش و فکتوری و ریسورس هم میسازه 
     php artisan meke:model -a <name>
+*/
+
+// episode45
+// Route::get('/show-user/{id}', 'HomeController@showUser');
+// Route::get('/show-user/{user}', 'HomeController@showUser');
+Route::get('/show-user/{name}', 'HomeController@showUser');
+/*
+    برو در پوشه 
+    apps/providers/RouteServiceProvider.php
+    در متود بوت ، میری و بعد از متود پَرنِت
+    مینویسی
+    Route::bind();
+    در آرگومان اولش دقیقا اسم اون متغیری که به 
+    مدلت پاس دادی رو میدی به صورت ی رشته
+    آرگومان دومت میشه ی کلوژر
+    توضیحات خیلی زیاده و من ترجیح میدم که
+    بری و جلسه ۴۵ رو دوباره ببینی
 */
