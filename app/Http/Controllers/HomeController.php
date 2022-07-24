@@ -16,53 +16,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // $users = DB::table('users')->insert([
-        //     ['name' => 'mahdi',
-        //     'email' => 'email@gmail.com',
-        //     'email_verified_at' => '2022-07-21 18:38:43	',
-        //     'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi'],
-        //     ['name' => 'hassan',
-        //     'email' => 'email2@gmail.com',
-        //     'email_verified_at' => '2022-07-21 18:38:45	',
-        //     'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi'],
 
-        // ]);
-        // $id = DB::table('users')->insertGetId([
-        //     'name' => 'mahdi',
-        //         'email' => 'email@gmail.com',
-        //         'email_verified_at' => '2022-07-21 18:38:43	',
-        //         'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi'
-        // ]);
-        // $user = DB::table('users')->where('id', 1)->update([
-        //     'name' => 'hassan'
-        // ]);
-        // $user = DB::table('users')->updateOrInsert(
-        //     ['name' => 'mahdi', 'email' => 'email@gmial.com', ],
-        //     ['password' => 'password'],
-        // );
-
-        // $users = DB::table('users')->where('id', 1)->decrement('age');
-
-        // $users = DB::table('users')->where('id', 87)->delete();
-        // $result = DB::transaction(function () {
-        //     DB::table('users')->where('id', 85)->update(['name' => 'test']);
-        //     DB::table('users')->where('id', 86)->update(['name' => 'test']);
-        // });
-
-        try
-        {
-            DB::beginTransaction();
-            DB::table('users')->where('id', 85)->update(['name' => 'mahdibahdi']);
-            DB::table('users')->where('id', 86)->update(['name' => 'thisismahdi']);
-            DB::commit();
-        }
-        catch (\Exception $e) {
-            echo $e->getMessage();
-        }
-
-
-        // dd($result);
-        // return view('home');
+        $users = "";
+        dd($users);
+        return view('home');
     }
 
     /**
