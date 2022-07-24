@@ -16,24 +16,34 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // $result = false;
-        // $users = DB::table('users')->when($result, function($query) {
-        //     $query->where('id', '1');
-        // })->get();
+        // $users = DB::table('users')->insert([
+        //     ['name' => 'mahdi',
+        //     'email' => 'email@gmail.com',
+        //     'email_verified_at' => '2022-07-21 18:38:43	',
+        //     'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi'],
+        //     ['name' => 'hassan',
+        //     'email' => 'email2@gmail.com',
+        //     'email_verified_at' => '2022-07-21 18:38:45	',
+        //     'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi'],
 
-        // $users = DB::table('users')->get();
-        // $users = DB::table('users')->first();
-        // $users = DB::table('users')->first()->id;
-        // $users = DB::table('users')->where('id', 1)->orWhere('id', 2)->get();
+        // ]);
+        // $id = DB::table('users')->insertGetId([
+        //     'name' => 'mahdi',
+        //         'email' => 'email@gmail.com',
+        //         'email_verified_at' => '2022-07-21 18:38:43	',
+        //         'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi'
+        // ]);
+        // $user = DB::table('users')->where('id', 1)->update([
+        //     'name' => 'hassan'
+        // ]);
+        $user = DB::table('users')->updateOrInsert(
+            ['name' => 'mahdi', 'email' => 'email@gmial.com', ],
+            ['password' => 'password'],
+        );
 
-        // $users = DB::table('users')->where('id', 1)->orWhere('id', 2)->count();
-        // $users = DB::table('users')->min('id');
-        // $users = DB::table('users')->max('id');
-        // $users = DB::table('users')->sum('id');
-        $users = DB::table('users')->avg('id');
+        
 
-
-        dd($users);
+        dd($user);
         return view('home');
     }
 

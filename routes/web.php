@@ -112,7 +112,7 @@ which is related to steps) two last steps in database
     php artisan db:seed --class=UsersTableSeeder
 */
 
-Route::any('/', 'HomeController@index');
+// Route::any('/', 'HomeController@index');
 // episode35
 
 /*
@@ -288,4 +288,39 @@ Route::any('/', 'HomeController@index');
     avg()
 
 
+*/
+// episode42
+
+Route::any('/', 'HomeController@index');
+/*
+    CRUD in laravel
+    insert([
+        'colNmae' => 'value',
+        .
+        .
+        .
+    ])
+
+    بعضی وقتا که میخوای ی چیزی رو تو جدول وارد کنی آیدیشم بگیری
+    insertGetId([
+        'colNmae' => 'value',
+        .
+        .
+        .
+    ])
+
+    دستورات آپدیت
+    
+    $user = DB::table('users')->where('id', 1)->update([
+        'name' => 'hassan'
+    ]);
+
+    update or insert
+
+        $user = DB::table('users')->updateOrInsert(
+            [parameters that expected to be found in db],
+            [pararmeters that should be updated , 
+            if first array was not exists , all values will insert to 
+            db]
+        );
 */
