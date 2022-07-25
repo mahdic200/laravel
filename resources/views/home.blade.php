@@ -1,12 +1,13 @@
 @extends('layouts.master')
 
-@push('css')
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="adfadsf.css">
-    <link rel="stylesheet" href="asfdasfd.css">
-    <link rel="stylesheet" href="sasfrhtdyjytyle.css">
-@endpush
-
-@prepend('css')
-    <link rel="stylesheet" href="extra.css">
-@endprepend
+@section('content')
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum assumenda neque reiciendis similique minus molestiae, ratione necessitatibus fuga repellendus nam quasi nostrum aperiam quisquam hic animi numquam nemo quas quibusdam.
+    </p>
+    @foreach ($users as $user)
+        <p>
+            {{ $user->email }}
+        </p>
+    @endforeach
+    {{ dd($users) }}
+@endsection

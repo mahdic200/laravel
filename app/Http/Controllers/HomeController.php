@@ -16,14 +16,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $users = User::all();
+        // dd($users);
+        return view('home', compact('users'));
     }
-
-    public function showUser(User $user)
-    {
-        dd($user);
-    }
-
     /**
      * Show the form for creating a new resource.
      *

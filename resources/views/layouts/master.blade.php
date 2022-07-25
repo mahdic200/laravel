@@ -10,10 +10,9 @@
     <link rel="stylesheet" href="css">
     <link rel="stylesheet" href="css">
     <link rel="stylesheet" href="css">
-    @stack('css')
     <title>Document</title>
 </head>
 <body>
-    hi
+    @yield('content')
 </body>
 </html>

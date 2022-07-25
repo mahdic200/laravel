@@ -60,7 +60,7 @@ use Illuminate\Support\Facades\Route;
 // episode45
 // Route::get('/show-user/{id}', 'HomeController@showUser');
 // Route::get('/show-user/{user}', 'HomeController@showUser');
-Route::get('/show-user/{name}', 'HomeController@showUser');
+// Route::get('/show-user/{name}', 'HomeController@showUser');
 /*
     برو در پوشه 
     apps/providers/RouteServiceProvider.php
@@ -72,4 +72,16 @@ Route::get('/show-user/{name}', 'HomeController@showUser');
     آرگومان دومت میشه ی کلوژر
     توضیحات خیلی زیاده و من ترجیح میدم که
     بری و جلسه ۴۵ رو دوباره ببینی
+*/
+
+
+// episode46
+Route::any('/', 'HomeController@index');
+/*
+    جلسه جدید
+    verifies the name of table
+    protected $table = 'my_posts';
+    این جلسه درمورد تنظیمات دیتابیس در کنترلر هست
+
+    selects all records -> User::all();
 */

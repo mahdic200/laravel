@@ -1,0 +1,44 @@
+[2022-07-25 10:28:26] local.ERROR: syntax error, unexpected ';' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 4): syntax error, unexpected ';' at /opt/lampp/htdocs/laravel_5.8/app/Post.php:9)
+[stacktrace]
+#0 {main}
+"} 
+[2022-07-25 10:30:59] local.ERROR: syntax error, unexpected '}', expecting ';' or ',' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 4): syntax error, unexpected '}', expecting ';' or ',' at /opt/lampp/htdocs/laravel_5.8/app/Post.php:11)
+[stacktrace]
+#0 {main}
+"} 
+[2022-07-25 10:31:04] local.ERROR: syntax error, unexpected '}', expecting ';' or ',' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 4): syntax error, unexpected '}', expecting ';' or ',' at /opt/lampp/htdocs/laravel_5.8/app/Post.php:11)
+[stacktrace]
+#0 {main}
+"} 
+[2022-07-25 10:31:05] local.ERROR: syntax error, unexpected '}', expecting ';' or ',' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 4): syntax error, unexpected '}', expecting ';' or ',' at /opt/lampp/htdocs/laravel_5.8/app/Post.php:11)
+[stacktrace]
+#0 {main}
+"} 
+[2022-07-25 10:32:03] local.ERROR: syntax error, unexpected '}', expecting ';' or ',' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 4): syntax error, unexpected '}', expecting ';' or ',' at /opt/lampp/htdocs/laravel_5.8/app/Post.php:11)
+[stacktrace]
+#0 {main}
+"} 
+[2022-07-25 10:34:20] local.ERROR: syntax error, unexpected '$protected' (T_VARIABLE), expecting function (T_FUNCTION) or const (T_CONST) {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 4): syntax error, unexpected '$protected' (T_VARIABLE), expecting function (T_FUNCTION) or const (T_CONST) at /opt/lampp/htdocs/laravel_5.8/app/Post.php:12)
+[stacktrace]
+#0 {main}
+"} 
+[2022-07-25 10:34:58] local.ERROR: syntax error, unexpected '}', expecting variable (T_VARIABLE) {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 4): syntax error, unexpected '}', expecting variable (T_VARIABLE) at /opt/lampp/htdocs/laravel_5.8/app/Post.php:14)
+[stacktrace]
+#0 {main}
+"} 
+[2022-07-25 10:35:03] local.ERROR: syntax error, unexpected '}', expecting ';' or ',' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 4): syntax error, unexpected '}', expecting ';' or ',' at /opt/lampp/htdocs/laravel_5.8/app/Post.php:14)
+[stacktrace]
+#0 {main}
+"} 
+[2022-07-25 10:35:04] local.ERROR: syntax error, unexpected '}', expecting ';' or ',' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 4): syntax error, unexpected '}', expecting ';' or ',' at /opt/lampp/htdocs/laravel_5.8/app/Post.php:14)
+[stacktrace]
+#0 {main}
+"} 
+[2022-07-25 10:35:35] local.ERROR: syntax error, unexpected '}' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 4): syntax error, unexpected '}' at /opt/lampp/htdocs/laravel_5.8/app/Post.php:15)
+[stacktrace]
+#0 {main}
+"} 
+[2022-07-25 10:36:33] local.ERROR: syntax error, unexpected '}', expecting variable (T_VARIABLE) {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 4): syntax error, unexpected '}', expecting variable (T_VARIABLE) at /opt/lampp/htdocs/laravel_5.8/app/Post.php:18)
+[stacktrace]
+#0 {main}
+"} 

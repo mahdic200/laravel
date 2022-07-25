@@ -10,10 +10,9 @@
     <link rel="stylesheet" href="css">
     <link rel="stylesheet" href="css">
     <link rel="stylesheet" href="css">
-    <?php echo $__env->yieldPushContent('css'); ?>
     <title>Document</title>
 </head>
 <body>
-    hi
+    <?php echo $__env->yieldContent('content'); ?>
 </body>
 </html><?php /**PATH /opt/lampp/htdocs/laravel_5.8/resources/views/layouts/master.blade.php ENDPATH**/ ?>
