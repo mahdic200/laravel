@@ -4,12 +4,9 @@
     <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum assumenda neque reiciendis similique minus molestiae, ratione necessitatibus fuga repellendus nam quasi nostrum aperiam quisquam hic animi numquam nemo quas quibusdam.
     </p>
-    <?php $__currentLoopData = $users; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $user): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-        <p>
-            <?php echo e($user->email); ?>
+    <?php echo e(dd($users)); ?>
 
-        </p>
-    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+    
     <?php echo e(dd($users)); ?>
 
 <?php $__env->stopSection(); ?>

@@ -85,3 +85,13 @@ Route::any('/', 'HomeController@index');
 
     selects all records -> User::all();
 */
+
+//episode47
+/*
+    fresh
+    یک نمونه جدید میسازه و میاره
+    refresh
+    همون نمونه قبلی رو ریلود میکنه
+    find([id1, id2, id3, ...])
+    findOrFail()
+*/

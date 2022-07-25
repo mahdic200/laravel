@@ -16,10 +16,33 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $users = User::all();
+        // $users = User::where('id', 85)->get();
+        // $users = User::orderBy('id', 'DESC')->take()->get();
+        // $user = User::where('id', 4)->get()->first();
+        // $user->name = 'nima';
+        // $user->refresh();
+        // $users = User::find([
+        //     85,84,83
+        // ]);
+        // try
+        // {
+        // $users = User::findOrFail(123);
+        // }
+        // catch (\Illuminate\Database\Eloquent\ModelNotFoundException $e)
+        // {
+        //     return $e->getMessage();
+        // }
+
+        // User::chunk(20, function($users) {
+        //     foreach ($users as $user) {
+        //         dd($users);
+        //     }
+        // });
         // dd($users);
-        return view('home', compact('users'));
+        // return view('home', compact('users'));
     }
+
+    
     /**
      * Show the form for creating a new resource.
      *
