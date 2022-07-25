@@ -76,7 +76,7 @@ use Illuminate\Support\Facades\Route;
 
 
 // episode46
-Route::any('/', 'HomeController@index');
+// Route::any('/', 'HomeController@index');
 /*
     جلسه جدید
     verifies the name of table
@@ -94,4 +94,11 @@ Route::any('/', 'HomeController@index');
     همون نمونه قبلی رو ریلود میکنه
     find([id1, id2, id3, ...])
     findOrFail()
+*/
+
+// episode48
+Route::get('/', 'HomeController@index');
+/*
+    دیگه حال جزوه نویسی ندارم ،‌کون لقت
+    برو فیلم ببین پاره شی
 */

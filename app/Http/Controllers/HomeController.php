@@ -16,33 +16,37 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // $users = User::where('id', 85)->get();
-        // $users = User::orderBy('id', 'DESC')->take()->get();
-        // $user = User::where('id', 4)->get()->first();
-        // $user->name = 'nima';
-        // $user->refresh();
-        // $users = User::find([
-        //     85,84,83
-        // ]);
-        // try
+        // foreach (User::where('created_at', '<', now())->cursor() as $user)
         // {
-        // $users = User::findOrFail(123);
-        // }
-        // catch (\Illuminate\Database\Eloquent\ModelNotFoundException $e)
-        // {
-        //     return $e->getMessage();
+        //     dd($user);
         // }
 
-        // User::chunk(20, function($users) {
-        //     foreach ($users as $user) {
-        //         dd($users);
-        //     }
-        // });
-        // dd($users);
-        // return view('home', compact('users'));
+        // $post = new Post();
+        // $post->title = 'test title';
+        // $post->user_id = '35';
+        // $post->save();
+
+        // $post = new Post([
+        //     'title' => 'ی چیزی همینطوری',
+        //     'user_id' => 15,
+        // ]);
+        // $post->save();
+
+        // $post = Post::make([
+        //     'title' => 'ی چیزی همینطوری چرت و پرت',
+        //     'user_id' => 56,
+        // ]);
+        // $post->save();
+
+        $post = Post::create([
+            'title' => 'ی چیزی که بفهمم کد درسته',
+            'user_id' => 32,
+        ]);
+
+        return view('home');
     }
 
-    
+
     /**
      * Show the form for creating a new resource.
      *
