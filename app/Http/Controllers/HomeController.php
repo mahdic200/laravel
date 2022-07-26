@@ -16,33 +16,24 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // foreach (User::where('created_at', '<', now())->cursor() as $user)
-        // {
-        //     dd($user);
-        // }
-
-        // $post = new Post();
-        // $post->title = 'test title';
-        // $post->user_id = '35';
+        // $post = Post::find(15);
+        // $post->title = "updated title";
         // $post->save();
+        // $post = Post::where('id', 15)->update([
+        //     'title' => 'second updated title',
 
-        // $post = new Post([
-        //     'title' => 'ی چیزی همینطوری',
-        //     'user_id' => 15,
+        // ]);
+        // $post = Post::find(15);
+        // $post->update([
+        //     'title' => 'third update',
         // ]);
         // $post->save();
+        // $post = Post::where('id', '<', now())->count();
+        $post = Post::where('id', '<', now())->avg('id');
 
-        // $post = Post::make([
-        //     'title' => 'ی چیزی همینطوری چرت و پرت',
-        //     'user_id' => 56,
-        // ]);
-        // $post->save();
 
-        $post = Post::create([
-            'title' => 'ی چیزی که بفهمم کد درسته',
-            'user_id' => 32,
-        ]);
 
+        dd($post);
         return view('home');
     }
 

@@ -97,8 +97,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 // episode48
-Route::get('/', 'HomeController@index');
+// Route::get('/', 'HomeController@index');
 /*
     دیگه حال جزوه نویسی ندارم ،‌کون لقت
     برو فیلم ببین پاره شی
+*/
+
+// episode49
+Route::get('/', 'HomeController@index');
+/*
+    دستور آپدیت
 */
