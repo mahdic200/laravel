@@ -16,26 +16,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // $post = Post::firstOrCreate(
-        //     ['title' => 'Minus libero et praesentium. Laborum et ad minima impedit ea mahdi is a good boy qui et animi quia praesentium.', 
-        //     'user_id' => '30'
-        // ],
-        // );
-        // $post = Post::find('171');
-        // $post->delete();
-        
-        // $post = Post::destroy(170);
-        // $post = Post::destroy([169, 168]);
-        // $post = Post::where('id', 40)->delete();
-        
-        // $post = Post::where('id', 39)->delete();
-        // $post = Post::withTrashed()->get();
-        // $post = Post::onlyTrashed()->restore();
-        // $post = Post::onlyTrashed()->forceDelete();
-
-
-        // dd($post);
-        return view('home');
+        $post = Post::active(0)->get();
+        dd($post);
     }
 
 

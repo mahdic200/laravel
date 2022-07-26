@@ -124,7 +124,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 // episode51
-Route::get('/', 'HomeController@index');
+// Route::get('/', 'HomeController@index');
 /*
     fillable vars
     $fillable -> اون چیز هایی که توی جدول قراره توسط کاربر پر بشن رو 
@@ -138,3 +138,14 @@ Route::get('/', 'HomeController@index');
     *هیچوقت هردوتا رو باهم استفاده نکن*
 */
 
+// episode52
+Route::get('/', 'HomeController@index');
+/*
+    $post = Post::where('status', 1)->get();
+    
+    ی تابع تعریف میکنی تو کنترلر پست ها مثلا
+    اولش مینویسی 
+    scope
+    بعدش اسمی که میخوای رو با حرف اول بزرگ مینویسی
+    scopeActive()
+*/

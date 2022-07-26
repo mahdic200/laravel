@@ -11,4 +11,9 @@ class Post extends Model
     protected $dates = ['deleted_at'];
     // protected $guarded = ['id'];
     protected $fillable = ['id'];
+
+    public function scopeActive($query, $status = 1)
+    {
+        return $query->where('status', $status);
+    }
 }
