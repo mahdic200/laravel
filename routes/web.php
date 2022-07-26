@@ -139,7 +139,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 // episode52
-Route::get('/', 'HomeController@index');
+// Route::get('/', 'HomeController@index');
 /*
     $post = Post::where('status', 1)->get();
     
@@ -185,4 +185,13 @@ Route::get('/', 'HomeController@index');
         return $value
     }
 
+*/
+
+// episode55
+Route::get('/', 'HomeController@index');
+/*
+    type casting 
+    collection to array 
+    to json 
+    to object
 */

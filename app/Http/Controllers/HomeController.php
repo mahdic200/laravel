@@ -16,12 +16,18 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // $user = User::where('id', 2)->first();
-        // dd($user->full_name);
-        // $user = new User;
-        // $user->first_name = 'MAHDI';
-        // $user->password = '12345678';
-        // $user->save();
+        // $post = new Post;
+        // $post->user_id = 12;
+        // $post->title = "new post 2";
+        // $post->status = '1';
+        // $post->save();
+        // $post = Post::where('id', 173)->first();
+        // dd(gettype($post->status));
+        $post = Post::all();
+        dd($post);
+        // dd($post->toArray());
+        // dd($post->toJson());
+
         return view('home');
     }
 

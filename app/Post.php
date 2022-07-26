@@ -13,17 +13,8 @@ class Post extends Model
     protected $dates = ['deleted_at'];
     protected $guarded = ['id'];
 
-    // protected static function boot()
-    // {
-    //     parent::boot();
-    //     static::addGlobalScope(new StatusScope);
-    // }
-    protected static function boot()
-    {
-        parent::boot();
-        static::addGlobalScope('status', function(Builder $builder) {
-            $builder->where('status', 1);
-        });
-    }
+    // protected $casts = [
+    //     'status' => 'string',
+    // ];
     
 }
