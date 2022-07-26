@@ -16,8 +16,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $post = Post::all();
-        dd($post);
+        // $user = User::where('id', 2)->first();
+        // dd($user->full_name);
+        // $user = new User;
+        // $user->first_name = 'MAHDI';
+        // $user->password = '12345678';
+        // $user->save();
+        return view('home');
     }
 
 

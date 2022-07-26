@@ -171,3 +171,18 @@ Route::get('/', 'HomeController@index');
         $builder->where('status', 1);
     });
 */
+
+// episode54
+/*
+    accessor and mutators
+    برو حتما اگه یادت رفته فیلم و نگا کن
+    ولی ی چی میگم ،‌اگر متغیر ولیو رو به ی اکسسور پاس دادی 
+    دیگه از 
+    $this->'column name'
+    استفاده نکن باشه ؟
+    example: 
+    getFirstNameAttribute($value){
+        return $value
+    }
+
+*/

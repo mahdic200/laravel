@@ -9,7 +9,18 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable
 {
     use Notifiable;
-
+    // public function getLastNameAttribute($value)
+    // {
+    //     return $value ? : "no last name";
+    // }
+    // public function getFullNameAttribute()
+    // {
+    //     return $this->first_name . " " . $this->last_name;
+    // }
+    // public function setFirstNameAttribute($value)
+    // {
+    //     $this->attributes['first_name'] = strtolower($value);
+    // }
     /**
      * The attributes that are mass assignable.
      *
