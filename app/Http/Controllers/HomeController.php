@@ -16,7 +16,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $post = Post::active(0)->get();
+        $post = Post::all();
         dd($post);
     }
 
