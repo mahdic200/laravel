@@ -110,7 +110,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 //episode50
-Route::get('/', 'HomeController@index');
+// Route::get('/', 'HomeController@index');
 /*
     دستور دلیت و ی چیزای دیگه
 
@@ -122,3 +122,19 @@ Route::get('/', 'HomeController@index');
     restore
     forceDelete
 */
+
+// episode51
+Route::get('/', 'HomeController@index');
+/*
+    fillable vars
+    $fillable -> اون چیز هایی که توی جدول قراره توسط کاربر پر بشن رو 
+    میگیره و اجازه میده که وارد کنی 
+
+    $guarded -> به اسمش خوب دقت کن که اشتباه ننویسیش
+    این میاد برعکس بالایی دقیقا اونهایی رو که قرار نیست پر بشن رو 
+    به سیستم میشناسونه
+
+    معمولا از دومی بیشتر استفاده میکنن
+    *هیچوقت هردوتا رو باهم استفاده نکن*
+*/
+
