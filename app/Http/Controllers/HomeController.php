@@ -23,8 +23,8 @@ class HomeController extends Controller
         // $post->save();
         // $post = Post::where('id', 173)->first();
         // dd(gettype($post->status));
-        $post = Post::all();
-        dd($post);
+        // $post = Post::all();
+        // dd($post);
         // dd($post->toArray());
         // dd($post->toJson());
 
