@@ -16,24 +16,25 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // $post = Post::find(15);
-        // $post->title = "updated title";
-        // $post->save();
-        // $post = Post::where('id', 15)->update([
-        //     'title' => 'second updated title',
+        // $post = Post::firstOrCreate(
+        //     ['title' => 'Minus libero et praesentium. Laborum et ad minima impedit ea mahdi is a good boy qui et animi quia praesentium.', 
+        //     'user_id' => '30'
+        // ],
+        // );
+        // $post = Post::find('171');
+        // $post->delete();
+        
+        // $post = Post::destroy(170);
+        // $post = Post::destroy([169, 168]);
+        // $post = Post::where('id', 40)->delete();
+        
+        // $post = Post::where('id', 39)->delete();
+        // $post = Post::withTrashed()->get();
+        // $post = Post::onlyTrashed()->restore();
+        // $post = Post::onlyTrashed()->forceDelete();
 
-        // ]);
-        // $post = Post::find(15);
-        // $post->update([
-        //     'title' => 'third update',
-        // ]);
-        // $post->save();
-        // $post = Post::where('id', '<', now())->count();
-        $post = Post::where('id', '<', now())->avg('id');
 
-
-
-        dd($post);
+        // dd($post);
         return view('home');
     }
 

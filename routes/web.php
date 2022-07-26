@@ -104,7 +104,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 // episode49
-Route::get('/', 'HomeController@index');
+// Route::get('/', 'HomeController@index');
 /*
     دستور آپدیت
+*/
+
+//episode50
+Route::get('/', 'HomeController@index');
+/*
+    دستور دلیت و ی چیزای دیگه
+
+    // $post = Post::find('171');
+    // $post->delete();
+    destroy method
+    with trash
+    only trashed
+    restore
+    forceDelete
 */
