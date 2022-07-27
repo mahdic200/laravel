@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
     mini project part 1
 */
 
-Route::resource('post', 'PostController');
+// Route::resource('post', 'PostController');
 // episode57
 /*
     ی سری کار های مقدماتی 
@@ -57,4 +57,20 @@ Route::resource('post', 'PostController');
 /*
     part 5 of mini project
     
+*/
+
+// episode61
+Route::get('/', 'HomeController@index');
+/*
+    میتونی به صورت دستی اسم کلید خارجی یا فارین کی رو بهش 
+    بدی تا ی وقت ارور نده بهت 
+
+    return $this->belongsTo('App\User', 'foreignKeyName');
+    در آرگومان سوم اون کلید دیگه که در جدولیه که
+    میخوای باهاش ارتباط بگیری رو بهش بده
+    به صورت پیشفرض فکر میکنه که آیدیه
+    
+    return $this->belongsTo('App\User', 'foreignKeyName', 'otherKey');
+
+    این جلسه خیلی مهم بود و باید اگر یادت رفته دوباره فیلماش رو ببینی
 */
