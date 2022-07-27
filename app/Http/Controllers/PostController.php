@@ -5,9 +5,8 @@ namespace App\Http\Controllers;
 use App\Post;
 use App\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
-class HomeController extends Controller
+class PostController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +15,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('welcome');
+        $posts = Post::join('users', 'users.id', 'posts.user_id')->select('posts.*', 'users.first_name as first_name', 'users.last_name as last_name')->get();
+        return view('post.index', compact('posts'));
     }
-
 
     /**
      * Show the form for creating a new resource.
@@ -27,7 +26,7 @@ class HomeController extends Controller
      */
     public function create()
     {
-        //
+        return view('post.create');
     }
 
     /**
@@ -49,7 +48,7 @@ class HomeController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('post.show', compact('id'));
     }
 
     /**
@@ -60,7 +59,7 @@ class HomeController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('post.edit', compact('id'));
     }
 
     /**

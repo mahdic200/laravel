@@ -13,6 +13,10 @@ class Post extends Model
     protected $dates = ['deleted_at'];
     protected $guarded = ['id'];
 
+    public function getFullNameAttribute()
+    {
+        return $this->first_name . " " . $this->last_name;
+    }
     // protected $casts = [
     //     'status' => 'string',
     // ];
