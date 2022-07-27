@@ -52,3 +52,9 @@ Route::resource('post', 'PostController');
     Session::get('sessionName');
     
 */
+
+// episode60
+/*
+    part 5 of mini project
+    
+*/

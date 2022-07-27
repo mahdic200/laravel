@@ -14,7 +14,7 @@
     </div>
 
     @if ($message = Session::get('success'))
-        <div class="alert alert-success">
+        <div class="alert alert-success icon-close">
             <p>
                 {{ $message }}
             </p>
@@ -37,9 +37,11 @@
                 <td>{{ $post->full_name }}</td>
                 <td>{{ $post['started_at'] }}</td>
                 <td>
-                    <form action="" method="POST">
+                    <form action="{{ route('post.destroy', $post->id) }}" method="POST">
                         <a class="btn btn-info" href="{{ route('post.show', $post->id) }}">نمایش</a>
                         <a class="btn btn-primary" href="{{ route('post.edit', $post->id) }}">ویرایش</a>
+                        @csrf
+                        @method('DELETE')
                         <button type="submit" class="btn btn-danger">حذف</button>
                     </form>
                 </td>
