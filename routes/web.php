@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
     mini project part 1
 */
 
-// Route::resource('post', 'PostController');
+Route::resource('post', 'PostController');
 // episode57
 /*
     ی سری کار های مقدماتی 
@@ -60,7 +60,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 // episode61
-Route::get('/', 'HomeController@index');
+// Route::get('/', 'HomeController@index');
 /*
     میتونی به صورت دستی اسم کلید خارجی یا فارین کی رو بهش 
     بدی تا ی وقت ارور نده بهت 
@@ -73,4 +73,24 @@ Route::get('/', 'HomeController@index');
     return $this->belongsTo('App\User', 'foreignKeyName', 'otherKey');
 
     این جلسه خیلی مهم بود و باید اگر یادت رفته دوباره فیلماش رو ببینی
+*/
+
+// episode62
+Route::get('/', 'HomeController@index');
+/*
+    one to many relationShip
+    has method
+    associate and dissociate
+    
+    این الان به صورت یک پراپرتی استفاده شده
+    $post->comments
+    اگر بخوای ی سری بلا سرش بیاری ،مثلا بخوای شرط بزاری 
+    چیارو برات بیاره باید به صورت متود ازش استفاده کنی 
+    $post->comments()
+    اینطوری
+    
+
+    خب از خودم راضیم ، تمرین این جلسه رو هم انجام دادم 
+    این یعنی به چیزایی که یاد گرفتم مسلط هستم
+    
 */

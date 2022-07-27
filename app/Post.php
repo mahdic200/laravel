@@ -14,6 +14,15 @@ class Post extends Model
     protected $fillable = [
         'title', 'user_id'
     ];
+
+    public function comments()
+    {
+        return $this->hasMany('App\Comment');
+    }
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
     public function getFullNameAttribute()
     {
         return $this->first_name . " " . $this->last_name;
