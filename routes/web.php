@@ -43,3 +43,12 @@ Route::resource('post', 'PostController');
     خب تمرین رو انجام دادم ، خیلی خوشحالم که تونستم
     
 */
+
+// episode59
+/*
+    how to send data using redirect with laravel
+    redirect()->route('address')->with('sessionName', 'value');
+
+    Session::get('sessionName');
+    
+*/
