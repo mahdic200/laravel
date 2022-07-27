@@ -13,17 +13,8 @@ class HomeController extends Controller
 {
     public function index()
     {
-        // $comment = Comment::find(1);
-        // $post = Post::find(25);
-        // $post = Post::has('comments')->get();
-        // $comment = Comment::find(3);
-        // $comment->post()->associate(Post::first());
-        // $comment->save();
-        // $comment = Comment::find(3);
-        // $comment->post()->dissociate();
-        // $comment->save();
-        $post = Post::find(25);
-        dd($post->comments()->where('id', 2)->get());
+        $user = User::find(82);
+        dd($user->info->color);
         return view('welcome');
     }
 }

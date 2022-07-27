@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
     mini project part 1
 */
 
-Route::resource('post', 'PostController');
+// Route::resource('post', 'PostController');
 // episode57
 /*
     ی سری کار های مقدماتی 
@@ -76,7 +76,7 @@ Route::resource('post', 'PostController');
 */
 
 // episode62
-Route::get('/', 'HomeController@index');
+// Route::get('/', 'HomeController@index');
 /*
     one to many relationShip
     has method
@@ -92,5 +92,14 @@ Route::get('/', 'HomeController@index');
 
     خب از خودم راضیم ، تمرین این جلسه رو هم انجام دادم 
     این یعنی به چیزایی که یاد گرفتم مسلط هستم
+
+*/
+
+// episode63
+Route::get('/', 'HomeController@index');
+/*
+    hasOneThrough($arg1, $arg2)
+    $arg1 -> مدلی که در نهایت باید بهش برسی
+    $arg2 -> مدلی که اینجا واسطه هست
     
 */
