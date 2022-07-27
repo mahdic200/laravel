@@ -96,10 +96,26 @@ use Illuminate\Support\Facades\Route;
 */
 
 // episode63
-Route::get('/', 'HomeController@index');
+// Route::get('/', 'HomeController@index');
 /*
     hasOneThrough($arg1, $arg2)
     $arg1 -> مدلی که در نهایت باید بهش برسی
     $arg2 -> مدلی که اینجا واسطه هست
     
+*/
+
+
+// episode64
+Route::get('/', 'HomeController@index');
+/*
+
+    // return $this->hasManyThrough(
+    //     'مدل نهایی ', 
+    //     'مدل واسطه', 
+    //     'کلید خارجی در جدول واسطه', 
+    //      'کلید خارجی در جدول نهایی',
+    //      'کلید داخلی در جدول',
+    //      'لوکال کی جدولی که داری ازش استفاده میکنی',
+    //      'لوکال کی جدول واسطه',
+    // );
 */
