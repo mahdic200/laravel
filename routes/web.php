@@ -106,7 +106,7 @@ use Illuminate\Support\Facades\Route;
 
 
 // episode64
-Route::get('/', 'HomeController@index');
+// Route::get('/', 'HomeController@index');
 /*
 
     // return $this->hasManyThrough(
@@ -118,4 +118,20 @@ Route::get('/', 'HomeController@index');
     //      'لوکال کی جدولی که داری ازش استفاده میکنی',
     //      'لوکال کی جدول واسطه',
     // );
+*/
+
+
+// episode65
+Route::get('/', 'HomeController@index');
+/*
+    many to many relationship
+    pivot table in laravel
+    باید دقت کنی اسم جدول واسطه رو که میخواد
+    ارتباط برقرار کنه ترکیبی از اسم دو تاجدولی بزنی که
+    اسم دوتا جدول به صورت بک باش ه نه جمع
+    بعدش باید بینشون آندر لاین بزاری
+    بعد از اون هم باید حواست باشه کلا به هیچی نیاز نداره 
+    جز فارن کی ، کلا توش کلید خارجیه
+    :| چیزای دیگه هم میتونی بزاری ولی مریضی مگه
+     
 */
