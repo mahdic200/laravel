@@ -122,7 +122,7 @@ use Illuminate\Support\Facades\Route;
 
 
 // episode65
-Route::get('/', 'HomeController@index');
+// Route::get('/', 'HomeController@index');
 /*
     many to many relationship
     pivot table in laravel
@@ -134,4 +134,42 @@ Route::get('/', 'HomeController@index');
     جز فارن کی ، کلا توش کلید خارجیه
     :| چیزای دیگه هم میتونی بزاری ولی مریضی مگه
      
+*/
+
+// episode66
+Route::get('/', 'HomeController@index');
+/*
+    belongs to many function
+    $post = Post::find(1);
+    $post->tags()->attach(1);
+    میاد و به پست شماره یک تگ شماره یک رو میچسبونه
+    برعکسشم داریم
+    detach
+
+    sync and attach
+    سینک همه قبلیا رو پاک میکنه
+    اتچ اضافه میکنه
+    میتونی به اینا آرایه هم پاس بدی
+    
+
+    حالا اگر در این حین ، اومدی و یک ستون به جدول پیوت
+    اضافه کردی ، برای اینکه موقع اینکار 
+    dd($post->tags)
+    اون ستون هم برات بیاره ، باید بری در مدلش
+    و با تابع 
+    withPivot
+    بهش بگی که بیا و این رو برای من با خودت ببر
+    return $this->belongsToMany('App\Tag')->withPivot('اسم اون ستون جدیده');
+    
+    خب حالا برای اینکه بتونی ازش دیدی بگیری باید بیای و
+    اینطوری صداش بزنی ، حواست هست که تگز یعنی چند تا تگ 
+    پس تک نیست !‌ این یعنی باید بیای و ی دونه رو برداری 
+    بعدش
+    dd($posts->tags->first()->pivote->"اسم اون ستونه که اضافش کردی");
+
+    اگه خواستی تاریخ اینارم بفرستی از دستور
+    withTimestamps()
+    توی مدلت استفاده میکنی و تامام
+    
+
 */

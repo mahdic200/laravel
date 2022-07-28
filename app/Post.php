@@ -15,16 +15,9 @@ class Post extends Model
         'title', 'user_id'
     ];
 
-    public function comments()
+    public function tags()
     {
-        return $this->hasMany('App\Comment');
-    }
-    public function user()
-    {
-        return $this->belongsTo('App\User');
-    }
-    public function getFullNameAttribute()
-    {
-        return $this->first_name . " " . $this->last_name;
+        return $this->belongsToMany('App\Tag')->withPivot('value');
+        // return $this->belongsToMany('App\Tag')->withTimestamps();
     }
 }
