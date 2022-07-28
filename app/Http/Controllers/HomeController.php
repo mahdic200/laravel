@@ -17,20 +17,30 @@ class HomeController extends Controller
 {
     public function index()
     {
-        // $post = Post::find(1);
+        // $posts = Post::all();
+        // foreach($posts as $post)
+        // {
+        //     dd($post, $post->comments);
+        // }
+
+        // $posts = Post::with('comments')->get();
+        // dd($posts[24]);
+
+        // $posts = Post::with(['comments', 'author'])->get();
+
+        // $posts = Post::withCount(['comments'])->get();
+        // dd($posts[24]);
+
         
-        // $comment = new Comment;
-        // $comment->comment = "باح باح";
-        // $post->comments()->save($comment);
+        // $posts = Post::with(['comments', 'comment.user'])->get();
+        // $posts = Post::with('comments:is,body')->get();
+        // $posts = Post::with('comments:is,body')->get();
+        // $posts = Post::with(['comments' => function($query) {
+        //     $query->where('id', '1');
+        // }])->get();
+        // dd($posts[24]);
 
-        // $post = Post::find(20);
-        // dd($post->tags);
-        // $video = Video::find(1);
-        // dd($video->tags);
-
-        $tag = Tag::find(1);
-        // dd($tag->videos);
-        dd($tag->posts);
+        
 
         return view('welcome');
     }

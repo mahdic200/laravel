@@ -15,8 +15,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 // episode69
-Route::get('/', 'HomeController@index');
+// Route::get('/', 'HomeController@index');
 /*
     polymorphy manytomany relations
-    
+
 */
+
+// episode70
+Route::get('/', 'HomeController@index');
+/*
+    ایگر لودینگ ؟
+
+    $posts = Post::with('اسم اون رابطه ایی که تو متود ساختی');
+    loadMissing()
+    
+/*
