@@ -22,11 +22,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 // episode70
-Route::get('/', 'HomeController@index');
+// Route::get('/', 'HomeController@index');
 /*
     ایگر لودینگ ؟
 
     $posts = Post::with('اسم اون رابطه ایی که تو متود ساختی');
-    loadMissing()
-    
+    loadMissing() 
 /*
+
+// episode71
+// Route::get('/', 'HomeController@index');
+/*
+    تست ها خیلی مهمن باید حسابی روشون کار کنی
+*/
