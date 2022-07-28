@@ -9,22 +9,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Post extends Model
 {
-    use SoftDeletes;
-    protected $dates = ['deleted_at'];
-    protected $fillable = [
-        'title', 'user_id'
-    ];
-    public function comments()
-    {
-        return $this->morphMany('App\Comment', 'commentable');
-    }
-    public function image()
-    {
-        return $this->morphOne('App\Image', 'imageable');
-    }
     public function tags()
     {
-        return $this->belongsToMany('App\Tag')->withPivot('value');
-        // return $this->belongsToMany('App\Tag')->withTimestamps();
+        return $this->morphToMany('App\Tag', 'taggable');
     }
 }
