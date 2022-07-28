@@ -460,6 +460,7 @@ class ComposerStaticInit3677a55341185b9df7930ba527b0c0d3
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Http\\View\\Composers\\TestComposer' => __DIR__ . '/../..' . '/app/Http/View/Composers/TestComposer.php',
+        'App\\Image' => __DIR__ . '/../..' . '/app/Image.php',
         'App\\Information' => __DIR__ . '/../..' . '/app/Information.php',
         'App\\Post' => __DIR__ . '/../..' . '/app/Post.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',

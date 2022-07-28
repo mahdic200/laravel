@@ -14,7 +14,10 @@ class Post extends Model
     protected $fillable = [
         'title', 'user_id'
     ];
-
+    public function image()
+    {
+        return $this->morphOne('App\Image', 'imageable');
+    }
     public function tags()
     {
         return $this->belongsToMany('App\Tag')->withPivot('value');
