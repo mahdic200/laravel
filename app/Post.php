@@ -14,6 +14,10 @@ class Post extends Model
     protected $fillable = [
         'title', 'user_id'
     ];
+    public function comments()
+    {
+        return $this->morphMany('App\Comment', 'commentable');
+    }
     public function image()
     {
         return $this->morphOne('App\Image', 'imageable');

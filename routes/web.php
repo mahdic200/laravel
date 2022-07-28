@@ -175,7 +175,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 // episode67
-Route::get('/', 'HomeController@index');
+// Route::get('/', 'HomeController@index');
 /*
     رابطه پلی مورفی
     خیلی خیلی خیلی مهمه
@@ -216,5 +216,14 @@ Route::get('/', 'HomeController@index');
     مدل پلی مورفیت ساختی 
     در اینجا میشه مدل ایمیج
     در آرگومان دوم میایم و اسم اون متود رو میزاریم
-    
+
+*/
+
+// episode68
+Route::get('/', 'HomeController@index');
+/*
+    morphMany 
+    دقیقا مث 
+    morphOne
+    هیچ چیز جدید و سختی نبود که بخوام دربارش چیز خاصی بنویسم
 */
