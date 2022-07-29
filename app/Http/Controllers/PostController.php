@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -14,15 +15,6 @@ class PostController extends Controller
      */
     public function index(Request $request)
     {
-        // dd($request->path());
-        // dd($request->is('post/*'));
-        // dd($request->url());
-        // dd($request->fullUrl());
-        
-        
-        // dd($request->method());
-        // dd($request->isMethod('GET'));
-
         $posts = Post::all();
         return view('post.index', compact('posts'));
     }
@@ -46,18 +38,18 @@ class PostController extends Controller
     public function store(Request $request)
     {
         // dd($request->all());
-        // dd($request->input('title'));
-        // dd($request->input('name', 'hassan'));
-        // dd($request->title);
-        // dd($request->only('title'));
-        // dd($request->except('title'));
-        // dd($request->has('name'));
-        // dd($request->filled('title'));
-        // dd($request->input('employees')[0]);
-        // dd($request->input('employees.0'));
-        dd($request->input('employees.0.firstName'));
+        // dd($request->file());
+        // dd($request->file('image'));
+        // dd($request->hasFile('image')->isValid());
+        // dd($request->file('image')->isValid());
+        // dd($request->file('image')->getMimeType());
+        // dd($request->file('image')->getMimeType());
 
-        Post::create($request->all());
+        // $fileName = time() . '_' . Str::random(10) . '.' . $request->image->extension();
+        // $fileName = time() . '.' . $request->image->extension();
+        // $request->file('image')->move(public_path('uploads'), $fileName);
+
+        // Post::create($request->all());
         return redirect()->route('post.index')->with('success', 'record created successfully');
     }
 

@@ -68,3 +68,11 @@ Route::resource('post', 'PostController');
     $request->path() -> مسیری که در اون هستی رو نشونت میده
     user input , $request's methods
 */
+
+// episode76
+Route::resource('post', 'PostController');
+/*
+    file , move, file()->isvalid, hasFile('name'), $request->file('image')->extension, file('image')->getMimeType(), Str::random(10), time(), public_path(), move(public_path('uploads'), $fileName), 
+
+    file('name')->extension() -> پسوند فایل ارسالی رو برمیگردونه
+*/
