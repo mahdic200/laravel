@@ -35,3 +35,21 @@ use Illuminate\Support\Facades\Route;
 /*
     تست ها خیلی مهمن باید حسابی روشون کار کنی
 */
+
+// episode72
+// Route::get('/', 'HomeController@index');
+/*
+    ی سریع توضیحات بود فقط
+*/
+
+// episode73
+Route::get('/', 'HomeController@index');
+/*
+    :| و باز هم نصب کردن پکیج های مختلف 
+    npm install
+    بعد از نصب ی فایل داری
+    webpack.mix.js
+    npm run dev
+    npm run watch
+    
+*/
