@@ -27,6 +27,11 @@
                 <div class="form-group d-flex flex-column align-items-start">
                     <strong>نویسنده:</strong>
                     <input type="number" name="user_id" class="form-control" placeholder="number">
+                    {{-- test --}}
+                    <input type="text" name="employees[0][firstName]" class="form-control" placeholder="ی چی بنویس ...">
+                    <input type="text" name="employees[0][lastName]" class="form-control" placeholder="ی چی بنویس ...">
+                    <input type="text" name="employees[1][firstName]" class="form-control" placeholder="ی چی بنویس ...">
+                    <input type="text" name="employees[1][lastName]" class="form-control" placeholder="ی چی بنویس ...">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">

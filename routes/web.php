@@ -55,9 +55,16 @@ Route::get('/', 'HomeController@index');
 */
 
 // episode74
-Route::get('/', 'HomeController@index');
+// Route::get('/', 'HomeController@index');
 /*
     error handling
     validation
-    
+
+*/
+
+// episode75
+Route::resource('post', 'PostController');
+/*
+    $request->path() -> مسیری که در اون هستی رو نشونت میده
+    user input , $request's methods
 */

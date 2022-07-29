@@ -17,4 +17,8 @@ class Post extends Model
     {
         return $this->morphToMany('App\Tag', 'taggable');
     }
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
 }

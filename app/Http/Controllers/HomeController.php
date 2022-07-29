@@ -17,23 +17,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $messages = [
-            'errors' => [
-                'something went wrong',
-
-            ],
-            'messages' => [
-                'create successfully',
-            ],
-
-        ];
-
-        // $messagebag = new \Illuminate\Support\MessageBag($messages);
-
-        // $error = new \Illuminate\Support\MessageBag();
-        // $error->add('error', 'something went wrong');
-
-
+        
         return view('home')->withErrors(['error' => 'خطایی رخ داد !']);
     }
 }

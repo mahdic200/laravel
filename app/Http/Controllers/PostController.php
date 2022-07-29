@@ -12,9 +12,18 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $posts = Post::join('users', 'users.id', 'posts.user_id')->select('posts.*', 'users.first_name as first_name', 'users.last_name as last_name')->get();
+        // dd($request->path());
+        // dd($request->is('post/*'));
+        // dd($request->url());
+        // dd($request->fullUrl());
+        
+        
+        // dd($request->method());
+        // dd($request->isMethod('GET'));
+
+        $posts = Post::all();
         return view('post.index', compact('posts'));
     }
 
@@ -36,6 +45,18 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+        // dd($request->all());
+        // dd($request->input('title'));
+        // dd($request->input('name', 'hassan'));
+        // dd($request->title);
+        // dd($request->only('title'));
+        // dd($request->except('title'));
+        // dd($request->has('name'));
+        // dd($request->filled('title'));
+        // dd($request->input('employees')[0]);
+        // dd($request->input('employees.0'));
+        dd($request->input('employees.0.firstName'));
+
         Post::create($request->all());
         return redirect()->route('post.index')->with('success', 'record created successfully');
     }

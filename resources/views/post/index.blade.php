@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
+{{-- {{ dd(request()->path(), "hello mahdi") }} --}}
 
     <div class="row">
         <div class="col-lg-12 my-5 d-flex flex-row justify-content-between margin-tb">
