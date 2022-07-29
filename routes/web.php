@@ -27,7 +27,7 @@ use Illuminate\Support\Facades\Route;
     ایگر لودینگ ؟
 
     $posts = Post::with('اسم اون رابطه ایی که تو متود ساختی');
-    loadMissing() 
+    loadMissing()
 /*
 
 // episode71
@@ -45,7 +45,7 @@ use Illuminate\Support\Facades\Route;
 // episode73
 // Route::get('/', 'HomeController@index');
 /*
-    :| و باز هم نصب کردن پکیج های مختلف 
+    :| و باز هم نصب کردن پکیج های مختلف
     npm install
     بعد از نصب ی فایل داری
     webpack.mix.js
@@ -72,15 +72,25 @@ use Illuminate\Support\Facades\Route;
 // episode76
 // Route::resource('post', 'PostController');
 /*
-    file , move, file()->isvalid, hasFile('name'), $request->file('image')->extension, file('image')->getMimeType(), Str::random(10), time(), public_path(), move(public_path('uploads'), $fileName), 
+    file , move, file()->isvalid, hasFile('name'), $request->file('image')->extension, file('image')->getMimeType(), Str::random(10), time(), public_path(), move(public_path('uploads'), $fileName),
 
     file('name')->extension() -> پسوند فایل ارسالی رو برمیگردونه
 */
 
 // episode77
-Route::get('/', 'HomeController@index');
-Route::resource('post', 'PostController');
+// Route::get('/', 'HomeController@index');
+// Route::resource('post', 'PostController');
 /*
     validation, Validator facades, Validator::make validator::make rules
 */
 
+// episode78
+Route::get('/', 'HomeController@index');
+Route::resource('post', 'PostController');
+/*
+    end of episode78 making our own validations rule message and changing 
+    validation language to persian\farsi and making, making attributes
+    ساخت قوانین اعتبار سنجی شخصی خودمون
+    php artisan make:rule <ruleName>
+    /app/rules/ -> در اینجا ساخته میشه
+*/
