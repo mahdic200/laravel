@@ -43,7 +43,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 // episode73
-Route::get('/', 'HomeController@index');
+// Route::get('/', 'HomeController@index');
 /*
     :| و باز هم نصب کردن پکیج های مختلف 
     npm install
@@ -63,16 +63,24 @@ Route::get('/', 'HomeController@index');
 */
 
 // episode75
-Route::resource('post', 'PostController');
+// Route::resource('post', 'PostController');
 /*
     $request->path() -> مسیری که در اون هستی رو نشونت میده
     user input , $request's methods
 */
 
 // episode76
-Route::resource('post', 'PostController');
+// Route::resource('post', 'PostController');
 /*
     file , move, file()->isvalid, hasFile('name'), $request->file('image')->extension, file('image')->getMimeType(), Str::random(10), time(), public_path(), move(public_path('uploads'), $fileName), 
 
     file('name')->extension() -> پسوند فایل ارسالی رو برمیگردونه
 */
+
+// episode77
+Route::get('/', 'HomeController@index');
+Route::resource('post', 'PostController');
+/*
+    validation, Validator facades, Validator::make validator::make rules
+*/
+
