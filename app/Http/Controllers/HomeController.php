@@ -17,31 +17,23 @@ class HomeController extends Controller
 {
     public function index()
     {
-        // $posts = Post::all();
-        // foreach($posts as $post)
-        // {
-        //     dd($post, $post->comments);
-        // }
+        $messages = [
+            'errors' => [
+                'something went wrong',
 
-        // $posts = Post::with('comments')->get();
-        // dd($posts[24]);
+            ],
+            'messages' => [
+                'create successfully',
+            ],
 
-        // $posts = Post::with(['comments', 'author'])->get();
+        ];
 
-        // $posts = Post::withCount(['comments'])->get();
-        // dd($posts[24]);
+        // $messagebag = new \Illuminate\Support\MessageBag($messages);
 
-        
-        // $posts = Post::with(['comments', 'comment.user'])->get();
-        // $posts = Post::with('comments:is,body')->get();
-        // $posts = Post::with('comments:is,body')->get();
-        // $posts = Post::with(['comments' => function($query) {
-        //     $query->where('id', '1');
-        // }])->get();
-        // dd($posts[24]);
+        // $error = new \Illuminate\Support\MessageBag();
+        // $error->add('error', 'something went wrong');
 
-        
 
-        return view('welcome');
+        return view('home')->withErrors(['error' => 'خطایی رخ داد !']);
     }
 }

@@ -51,5 +51,13 @@ Route::get('/', 'HomeController@index');
     webpack.mix.js
     npm run dev
     npm run watch
+
+*/
+
+// episode74
+Route::get('/', 'HomeController@index');
+/*
+    error handling
+    validation
     
 */
