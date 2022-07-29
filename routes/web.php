@@ -85,12 +85,31 @@ use Illuminate\Support\Facades\Route;
 */
 
 // episode78
-Route::get('/', 'HomeController@index');
-Route::resource('post', 'PostController');
+// Route::get('/', 'HomeController@index');
+// Route::resource('post', 'PostController');
 /*
     end of episode78 making our own validations rule message and changing 
     validation language to persian\farsi and making, making attributes
     ساخت قوانین اعتبار سنجی شخصی خودمون
     php artisan make:rule <ruleName>
     /app/rules/ -> در اینجا ساخته میشه
+*/
+
+// episode79
+Route::get('/', 'HomeController@index');
+Route::resource('post', 'PostController');
+/*
+    میتونی برای هرقسمتی که داری اعتبارسنجی میکنی ی فایل جدا بنویسی
+    ی فرم ریکوئست
+    php artisan make:request <requestName>
+    app/http/Request
+    بهتره که آخر اسمش ی ریکوئست هم بزاری
+    و اینطوری ازش استفاده کن 
+    public function store(StorePostRequest $request)
+    توی کنترلر پست بجا اینکه تو متود استور 
+    بیای و ی نمونه از ریکوئست بسازی 
+    از اون ریکوئست آماده ات بساز که تو پوشه
+    app/http/Request
+    ساختی
+    بهترین فصلی که داشتم این بود ، فوق العاده بود ،‌حال کردم 
 */

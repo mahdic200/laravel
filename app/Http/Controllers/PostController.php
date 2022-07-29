@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use App\Rules\Uppercase;
+use App\Http\Requests\StorePostRequest;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -37,19 +38,10 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StorePostRequest $request)
     {
-        // $request->validate([
-        //     'title' => 'required|min:5',
-        //     'user_id' => 'required',
-        // ],[
-        //     'title.required' => '',
-        //     'user_id' => 'mahdi is a good boy',
-        // ]);
-        $request->validate([
-            'title' => ['required', new Uppercase],
-        ]);
-
+        $validated = $request->validated();
+        dd($validated);
         // Post::create($request->all());
         return redirect()->route('post.index')->with('success', 'record created successfully');
     }
