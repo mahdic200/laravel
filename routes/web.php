@@ -17,7 +17,6 @@ use App\Http\Controllers\HomeController;
 
 
 // episode86
-Auth::routes();
 /*
     old -> این خیلی بکار میاد 
     مثلا ی فرم داری پرش کردی ی جاش اشتباهه فقط 
@@ -32,8 +31,33 @@ Auth::routes();
 /*
     encrypt and hash
 */
+Auth::routes();
+
+Route::get('logout', 'Auth\LoginController@logout');
+
 Route::get('/', 'HomeController@index');
 
 Route::resource('post', 'PostController')->middleware('auth.basic');
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// episode88
+/*
+    Auth:route([
+        'reset' => false, عوض کردن پسورد ممنوع میشه
+        'verify' => true, تایید ایمیل 
+        'register' => false, ثبت نام ممنوع
+    ])
+    auth()->logoutOtherDevices('passwordthisuser');
+    چیزی بسیار مفید
+    این کاربری که الان لاگ این شده رو میاد و 
+    بقیه لاگ این هاش رو از دستگاه های دیگه پاک میکنه
+    یعنی فقط تو همین دستگاه باید لاگ این باشی
+    باید برای استفاده بیای و میدل ورش رو فعال کنی 
+    app/http/kernel.php
+    بری و میدل ورش رو از کامنت در بیاری
+    AuthenticateSession::class
+
+    auth()->once(), auth()->loginUsingId(), auth()->login($user), auth()->attempt, auth()->logoutOtherDevices('passwordthisuser'), Auth:route
+
+*/
