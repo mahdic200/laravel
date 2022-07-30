@@ -172,8 +172,13 @@ use App\Http\Controllers\HomeController;
 // Route::get('/', 'HomeController@index');
 /*
     php artisan make:auth
-    
 */
-Auth::routes();
+// Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
+
+// episode82
+// Route::get('/', 'HomeController@index');
+/*
+    vendor/laravel/framework/src/illuminate/Foundaction/Auth/AuthenticatesUsers.php
+*/
