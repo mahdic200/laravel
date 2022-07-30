@@ -1,8 +1,9 @@
 <?php
 
 
-use App\Http\Controllers\HomeController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -115,9 +116,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 // episode80
-Route::get('/', 'HomeController@index');
-Route::resource('post', 'PostController');
-Route::resource('product', 'ProductController');
+// Route::get('/', 'HomeController@index');
+// Route::resource('post', 'PostController');
+// Route::resource('product', 'ProductController');
 /*
     نوشتن ی تست 
     php artisan make:test <Name> ...
@@ -166,3 +167,13 @@ Route::resource('product', 'ProductController');
 
 
 */
+
+// episode81
+// Route::get('/', 'HomeController@index');
+/*
+    php artisan make:auth
+    
+*/
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

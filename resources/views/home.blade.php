@@ -1,19 +1,23 @@
-@extends('layouts.master')
-@section('title', 'test')
+@extends('layouts.app')
+
 @section('content')
-    <center>
-        <h1 class="display-4">
-            this is a test
-        </h1>
-    </center>
-        @include('layouts.partials.error')
-        <p>
-            {{-- {{ dd($errors) }} --}}
-        </p>
-    
-@endsection
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Dashboard</div>
 
+                <div class="card-body">
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
 
-@section('scripts')
-
+                    You are logged in!
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection
