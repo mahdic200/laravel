@@ -173,12 +173,24 @@ use App\Http\Controllers\HomeController;
 /*
     php artisan make:auth
 */
-// Auth::routes();
-
-// Route::get('/home', 'HomeController@index')->name('home');
 
 // episode82
 // Route::get('/', 'HomeController@index');
 /*
     vendor/laravel/framework/src/illuminate/Foundaction/Auth/AuthenticatesUsers.php
 */
+
+
+// episode83
+// Route::get('/', 'HomeController@index');
+/*
+    اگه بک اسلش قبلش بزاری نیاز نیست یوزش کنی 
+    \Auth
+    هرکلاسی رو
+    @auth
+    هرچی که بنویسی وقتی کاربر لاگ این باشه نمایش داده میشه
+    @guest
+    هرچی که کاربرای مهمان باید ببینن
+*/
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
