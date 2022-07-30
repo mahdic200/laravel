@@ -28,3 +28,12 @@ Auth::routes();
 
 */
 
+// episode87
+/*
+    encrypt and hash
+*/
+Route::get('/', 'HomeController@index');
+
+Route::resource('post', 'PostController')->middleware('auth.basic');
+
+Route::get('/home', 'HomeController@index')->name('home');
