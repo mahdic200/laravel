@@ -1,19 +1,24 @@
-<?php $__env->startSection('title', 'test'); ?>
 <?php $__env->startSection('content'); ?>
-    <center>
-        <h1 class="display-4">
-            this is a test
-        </h1>
-    </center>
-        <?php echo $__env->make('layouts.partials.error', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
-        <p>
-            
-        </p>
-    
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Dashboard</div>
+
+                <div class="card-body">
+                    <?php if(session('status')): ?>
+                        <div class="alert alert-success" role="alert">
+                            <?php echo e(session('status')); ?>
+
+                        </div>
+                    <?php endif; ?>
+
+                    You are logged in!
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <?php $__env->stopSection(); ?>
 
-
-<?php $__env->startSection('scripts'); ?>
-
-<?php $__env->stopSection(); ?>
-<?php echo $__env->make('layouts.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /opt/lampp/htdocs/laravel_5.8/resources/views/home.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /opt/lampp/htdocs/laravel_5.8/resources/views/home.blade.php ENDPATH**/ ?>

@@ -194,3 +194,12 @@ use App\Http\Controllers\HomeController;
 */
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
+
+// episode84
+/*
+    making our middlewares
+    php artisan make:middleware <Name>
+    app/http/middleware 
+    تحقیق درباره دیزاین پترنی که میدلور رو باهاش درست میکنیم ؟
+    
+*/
