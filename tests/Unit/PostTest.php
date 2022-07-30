@@ -16,26 +16,20 @@ class PostTest extends TestCase
      *
      * @return void
      */
-    // public function test_post_exist()
+    // public function test_input_missing_a_title_is_rejected()
     // {
-    //     $this->assertDatabaseHas('posts', ['user_id' => 288]);
-
+    //     $response = $this->post(route('post.store'), [
+    //         'title' => 'test title',
+    //         // 'user_id' => 20,
+    //     ]);
+    //     $response->assertRedirect();
+    //     $response->assertSessionHasErrors();
     // }
-
-    // public function test_full_name_accessor_works()
-    // {
-    //     $user = factory(User::class)->make(['first_name' => 'مهدی', 'last_name' => 'رضائی']);
-    //     // $this->assertEquals('مهدی رضائی', $user->fullName);
-    //     $this->assertEquals('مهدی رضائی', $user->full_name);
-    // }
-
-    public function test_relation()
+    public function test_valid_input_should_create_a_post_in_database()
     {
-        $comment = factory(Comment::class)->make([
-            'comment' => 'nice',
-            'post_id' => 10,
-        ]);
-        $this->assertInstanceOf('App\Post', $comment->post);
+        $this->post(route('post.store'), ['title' => 'this is my new title', 'user_id' => 15]);
+        $this->assertDatabaseHas('posts', ['title' => 'this is my new title', 'user_id' => 15]);
+
     }
 
 }

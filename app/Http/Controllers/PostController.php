@@ -40,9 +40,9 @@ class PostController extends Controller
      */
     public function store(StorePostRequest $request)
     {
-        $validated = $request->validated();
-        dd($validated);
-        // Post::create($request->all());
+        // $validated = $request->validated();
+        // dd($validated);
+        Post::create($request->all());
         return redirect()->route('post.index')->with('success', 'record created successfully');
     }
 

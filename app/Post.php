@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Post extends Model
 {
+    protected $guarded = ['id'];
     public function comments()
     {
         return $this->hasMany('App\Comment');

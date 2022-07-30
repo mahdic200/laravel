@@ -96,8 +96,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 // episode79
-Route::get('/', 'HomeController@index');
-Route::resource('post', 'PostController');
+// Route::get('/', 'HomeController@index');
+// Route::resource('post', 'PostController');
 /*
     میتونی برای هرقسمتی که داری اعتبارسنجی میکنی ی فایل جدا بنویسی
     ی فرم ریکوئست
@@ -112,4 +112,57 @@ Route::resource('post', 'PostController');
     app/http/Request
     ساختی
     بهترین فصلی که داشتم این بود ، فوق العاده بود ،‌حال کردم 
+*/
+
+// episode80
+Route::get('/', 'HomeController@index');
+Route::resource('post', 'PostController');
+Route::resource('product', 'ProductController');
+/*
+    نوشتن ی تست 
+    php artisan make:test <Name> ...
+    /tests/Unit/
+    خب ی تمرین باید بنویسم که دارم مینویسم
+    اسمش پروداکته
+    موارد مهم قانون های سند لاراول برای اعتبار سنجی
+    array <
+    alpha <
+    between <
+    confirmed < نفهمیدم
+    date < نفهمیدم
+    diffrent < 
+    digits < 
+    digits between <
+    file < ***
+    exists < **
+    filled < 
+    greather than < 
+    in < **
+    in array < 
+    integer < combine it with numeric
+    json <
+    less than <
+    max < 
+    mimetype < **
+    min <
+    not in <
+    not regex <
+    nullable < 
+    numeric < 
+    regular expression < 
+    required < 
+    required if <
+    required unless <
+    required with < **
+    required withAll <
+    required withOut All < 
+    size < **
+    sometimes < **
+    starts with < 
+    string < 
+    timezone < 
+    unique < ****
+    url < 
+
+
 */
