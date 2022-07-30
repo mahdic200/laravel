@@ -16,13 +16,15 @@ use App\Http\Controllers\HomeController;
 */
 
 
-// episode85
-Route::any('/test', 'HomeController@test')->middleware('checkAge');
+// episode86
 Auth::routes();
-
-
-// Route::get('/home', 'HomeController@index')->name('home');
 /*
+    old -> این خیلی بکار میاد 
+    مثلا ی فرم داری پرش کردی ی جاش اشتباهه فقط 
+    میای و به این اسم اون اینپوت رو میدی بعدش
+    اون بعد از اینکه صفحه رفرش شد دیگه اون و پاک نمیکنه 
+    و برات نگهش میداره و فقط جایی که اشتباه پر کردی رو باید
+    دوباره پر کنی 
 
 */
 
