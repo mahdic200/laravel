@@ -72,5 +72,13 @@ Route::get('/home', 'HomeController@index')->name('home');
     practice 4
     redirect admin to panel
 */
+// روش آقای خسروجردی
+Route::get('/admin', 'AdminController@index')->middleware('auth', 'CheckAdmin');
 
-Route::get('/admin', 'AdminController@index');
+// episode91
+/*
+    حل تمرین
+    اصن منظورش اونی که فکر میکردم نبود 
+    فقط میخواست که ادمین بتونه وارد پنلش بشه 
+    چیزی که من فکر میکردم اشتباه بود
+*/

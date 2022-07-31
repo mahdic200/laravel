@@ -8,10 +8,11 @@ class AdminController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        // این روش من بود
+        // $this->middleware('auth');
     }
     public function index()
     {
-        return "this is admin panel";
+        return view('admin');
     }
 }

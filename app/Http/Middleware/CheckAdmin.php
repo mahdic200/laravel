@@ -16,14 +16,13 @@ class CheckAdmin
      */
     public function handle($request, Closure $next)
     {
-        $user = Auth::user();
-        if (isset($user))
-        {
-            if ($user->permission == 'admin')
+        // if (Auth::check()) 
+        // {
+            if (Auth::user()->permission != 'admin')
             {
-                return redirect('/admin');
+                return redirect('home');
             }
-        }
+        // }
         return $next($request);
     }
 }
