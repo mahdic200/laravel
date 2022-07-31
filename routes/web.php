@@ -31,15 +31,6 @@ use App\Http\Controllers\HomeController;
 /*
     encrypt and hash
 */
-Auth::routes();
-
-Route::get('logout', 'Auth\LoginController@logout');
-
-Route::get('/', 'HomeController@index');
-
-Route::resource('post', 'PostController')->middleware('auth.basic');
-
-Route::get('/home', 'HomeController@index')->name('home');
 
 // episode88
 /*
@@ -77,5 +68,34 @@ Route::get('/home', 'HomeController@index')->name('home');
 /*
     ی تمرین داده آقای خسروجردی
     امروز فلش اوبونتوم سوخت
-    $guard, 
+    $guard,
 */
+
+
+// episode94
+/*
+    nested namespace, overwriting methods in loginController in Admin namespace
+*/
+Auth::routes();
+
+Route::get('logout', 'Auth\LoginController@logout');
+
+Route::get('/', 'HomeController@index');
+
+Route::namespace('Admin')->prefix('admin')->group(function() {
+    
+    Route::get('/', 'HomeController@index')->name('admin.home');
+    
+    Route::namespace('Auth')->group(function() {
+
+        Route::get('/login', 'LoginController@showLoginForm')->name('admin.login');
+
+        Route::post('/login', 'LoginController@login');
+
+        Route::post('/logout', 'LoginController@login')->name('admin.logout');
+    });
+});
+
+Route::resource('post', 'PostController')->middleware('auth.basic');
+
+Route::get('/home', 'HomeController@index')->name('home');
