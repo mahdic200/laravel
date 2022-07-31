@@ -66,3 +66,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 /*
     guard in laravel
 */
+
+// episode90 , 91
+/*
+    تمرین چهار و حلش 
+    Auth::check()
+*/
