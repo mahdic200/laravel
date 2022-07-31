@@ -98,9 +98,15 @@ use App\Http\Controllers\HomeController;
         }
 
     Handler.php
-    
+
     unauthenticated
     
+*/
+
+// episode96
+/*
+    making admin pages,
+    and making admin folder in views
 */
 Auth::routes();
 
