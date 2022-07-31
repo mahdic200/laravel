@@ -76,6 +76,32 @@ use App\Http\Controllers\HomeController;
 /*
     nested namespace, overwriting methods in loginController in Admin namespace
 */
+
+// episode95
+/*
+    making adminController
+    php artisan make:controller Admin/HomeController
+    میدونستی میتونی گارد پیشفرض میدل ور هارو اینطوری تغییر بدی ؟ 
+    $this->middleware('auth:<guardName>');
+    مثلا
+    $this->middleware('auth:admin');
+    
+    changing returned redirect in redirectifauthenticated.php
+    
+        if ($guard == 'admin')
+        {
+            return redirect()->route('admin.home');
+        }
+        else
+        {
+        return redirect('/home');
+        }
+
+    Handler.php
+    
+    unauthenticated
+    
+*/
 Auth::routes();
 
 Route::get('logout', 'Auth\LoginController@logout');

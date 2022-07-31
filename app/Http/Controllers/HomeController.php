@@ -16,26 +16,6 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        // برای لاگ این دستی 
-        // if (auth()->attempt([
-        //     'email' => 'rmahdi170@gmail.com',
-        //     'password' => 'password',
-        // ]))
-        // {
-        //     return 'yes';
-        // }
-        // auth()->loginUsingId(2);
-
-        // $user = User::find(7);
-        // auth()->login($user);
-        
-
-        // auth()->once([
-        //     'email' => 'rmahdi170@gmail.com',
-        //     'password' => 'password',
-        // ]);
-
-        // auth()->logoutOtherDevices('password');
         $this->middleware('auth');
     }
 
@@ -46,7 +26,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // auth()->logout();
         return view('home');
     }
 
