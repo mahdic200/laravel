@@ -66,3 +66,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 /*
     guard in laravel
 */
+
+// episode90
+/*
+    practice 4
+    redirect admin to panel
+*/
+
+Route::get('/admin', 'AdminController@index');
