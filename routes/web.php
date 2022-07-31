@@ -61,3 +61,8 @@ Route::get('/home', 'HomeController@index')->name('home');
     auth()->once(), auth()->loginUsingId(), auth()->login($user), auth()->attempt, auth()->logoutOtherDevices('passwordthisuser'), Auth:route
 
 */
+
+// episode89
+/*
+    guard in laravel
+*/
