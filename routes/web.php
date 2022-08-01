@@ -115,6 +115,14 @@ use App\Http\Controllers\HomeController;
     bcrypt function makes passwords encrypted
     seeding AdminsTable
 */
+
+// episode98
+/*
+    نوشتن یک تست برای لاگ این کاربر
+    ی تست برای ثبت نام
+    ی تست برای کاربر لاگ این شده که بتونه پست جدید بزاره یا نه
+    be() , actingAs()
+*/
 Auth::routes();
 
 Route::get('logout', 'Auth\LoginController@logout');
@@ -135,6 +143,6 @@ Route::namespace('Admin')->prefix('admin')->group(function() {
     });
 });
 
-Route::resource('post', 'PostController')->middleware('auth.basic');
+Route::resource('post', 'PostController');
 
 Route::get('/home', 'HomeController@index')->name('home');
