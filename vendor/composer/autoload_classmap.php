@@ -6,6 +6,7 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'AdminsTableSeeder' => $baseDir . '/database/seeds/AdminsTableSeeder.php',
     'App\\Address' => $baseDir . '/app/Address.php',
     'App\\Admin' => $baseDir . '/app/Admin.php',
     'App\\Car' => $baseDir . '/app/Car.php',
@@ -13,6 +14,9 @@ return array(
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Country' => $baseDir . '/app/Country.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
+    'App\\Http\\Controllers\\AdminController' => $baseDir . '/app/Http/Controllers/AdminController.php',
+    'App\\Http\\Controllers\\Admin\\Auth\\LoginController' => $baseDir . '/app/Http/Controllers/Admin/Auth/LoginController.php',
+    'App\\Http\\Controllers\\Admin\\HomeController' => $baseDir . '/app/Http/Controllers/Admin/HomeController.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
     'App\\Http\\Controllers\\Auth\\LoginController' => $baseDir . '/app/Http/Controllers/Auth/LoginController.php',
     'App\\Http\\Controllers\\Auth\\RegisterController' => $baseDir . '/app/Http/Controllers/Auth/RegisterController.php',

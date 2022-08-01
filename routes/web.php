@@ -108,6 +108,13 @@ use App\Http\Controllers\HomeController;
     making admin pages,
     and making admin folder in views
 */
+
+// episode97
+/*
+    php artisan make:seeder AdminsTableSeeder
+    bcrypt function makes passwords encrypted
+    seeding AdminsTable
+*/
 Auth::routes();
 
 Route::get('logout', 'Auth\LoginController@logout');

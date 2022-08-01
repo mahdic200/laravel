@@ -435,6 +435,7 @@ class ComposerStaticInit3677a55341185b9df7930ba527b0c0d3
     );
 
     public static $classMap = array (
+        'AdminsTableSeeder' => __DIR__ . '/../..' . '/database/seeds/AdminsTableSeeder.php',
         'App\\Address' => __DIR__ . '/../..' . '/app/Address.php',
         'App\\Admin' => __DIR__ . '/../..' . '/app/Admin.php',
         'App\\Car' => __DIR__ . '/../..' . '/app/Car.php',
@@ -442,6 +443,9 @@ class ComposerStaticInit3677a55341185b9df7930ba527b0c0d3
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Country' => __DIR__ . '/../..' . '/app/Country.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\AdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminController.php',
+        'App\\Http\\Controllers\\Admin\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/Auth/LoginController.php',
+        'App\\Http\\Controllers\\Admin\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/HomeController.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
